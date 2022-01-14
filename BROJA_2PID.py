@@ -534,7 +534,7 @@ def pid(pdf_dirty, cone_solver="ECOS", output=0, **solver_args):
             assert v > -.1,                                       "broja_2pid.pid(pdf): pdf's values must not be negative"
             sum_p += v
         #^ for
-        assert abs(sum_p - 1)< 1.e-10,                            "broja_2pid.pid(pdf): pdf's values must sum up to 1 (tolerance of precision is 1.e-10)"
+        assert abs(sum_p - 1)< 1.e-7,                            "broja_2pid.pid(pdf): pdf's values must sum up to 1 (tolerance of precision is 1.e-10)"
     #^ if
     assert type(output) is int, "broja_2pid.pid(pdf,output): output must be an integer"
 
